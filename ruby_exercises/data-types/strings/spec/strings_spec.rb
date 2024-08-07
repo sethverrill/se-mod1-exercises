@@ -2,7 +2,7 @@ RSpec.describe 'Strings' do
   it 'test 1' do
     name = "alice"
     # In place of the line below, call a method on the name variable
-    # defined above to acheive the expected output.
+     # defined above to acheive the expected output.
     actual = name.capitalize
     expected = "Alice"
 

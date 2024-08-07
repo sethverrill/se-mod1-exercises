@@ -40,7 +40,7 @@ RSpec.describe 'ints and floats' do
     lucky = 7
     unlucky = 13
     # Using the two variables defined above,
-    # find the remainder of the unlucky divided by the lucky
+     # find the remainder of the unlucky divided by the lucky
     remainder = unlucky.remainder(lucky) 
     expect(remainder).to eq(6)
   end
