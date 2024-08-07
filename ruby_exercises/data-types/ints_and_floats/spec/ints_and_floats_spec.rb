@@ -4,7 +4,7 @@ RSpec.describe 'ints and floats' do
     unlucky = 13
     # Using the two variables defined above,
     # add the lucky number and the unlucky number
-    sum = 7+13
+    sum = lucky+unlucky
     expect(sum).to eq(20)
   end
 
@@ -13,7 +13,7 @@ RSpec.describe 'ints and floats' do
     unlucky = 13
     # Using the two variables defined above,
     # subtract the unlucky from the lucky
-    difference = 7-13
+    difference = lucky-unlucky
     expect(difference).to eq(-6)
   end
 
@@ -23,7 +23,7 @@ RSpec.describe 'ints and floats' do
     # Using the two variables defined above,
     # divide unlucky by lucky
     # NOTE: this is integer division
-    quotient = 13/7
+    quotient = unlucky/lucky
     expect(quotient).to eq(1)
   end
 
