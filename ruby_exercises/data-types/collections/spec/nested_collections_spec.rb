@@ -78,7 +78,7 @@ RSpec.describe 'Nested Collections' do
     expect(team).to eq(expected)
   end
 
-  xit 'test 8' do
+  it 'test 8' do
     team = {
       pitchers: ["Kenny", "Joan", "Shabaz"],
       fielders: ["Luke", "Chris", "Megan", "Mark", "Mackenzie"],
@@ -87,7 +87,7 @@ RSpec.describe 'Nested Collections' do
     # Using the team variable defined above
     # create a new key :coaches with the value
     # of an empty array
-    
+    team[:coaches] = []
 
     expected = {
       pitchers: ["Kenny", "Joan", "Shabaz"],
@@ -141,7 +141,10 @@ RSpec.describe 'Nested Collections' do
   end
 
   it 'test 12' do
-    three_day_forecast = {days: [{high: 70,low: 63,summary: "Mostly Sunny"},{high: 55,low: 47,summary: "Partly Cloudy"},{high: 77,low: 64,summary: "Sunny"}], "date" => "6-21-18",ref_num: 3456789765456787656}
+    three_day_forecast = {days: [{high: 70,low: 63,summary: "Mostly Sunny"},
+    {high: 55,low: 47,summary: "Partly Cloudy"},
+    {high: 77,low: 64,summary: "Sunny"}],
+     "date" => "6-21-18",ref_num: 3456789765456787656}
     # Using the three_day_forecast variable defined above,
     # retrieve the expected piece of information
 
@@ -170,12 +173,15 @@ RSpec.describe 'Nested Collections' do
     expect(actual).to eq(expected)
   end
 
-  xit 'test 15' do
-    three_day_forecast = {days: [{high: 70,low: 63,summary: "Mostly Sunny"},{high: 55,low: 47,summary: "Partly Cloudy"},{high: 77,low: 64,summary: "Sunny"}], "date" => "6-21-18",ref_num: 3456789765456787656}
+  it 'test 15' do
+    three_day_forecast = {days: [{high: 70,low: 63,summary: "Mostly Sunny"},
+    {high: 55,low: 47,summary: "Partly Cloudy"},
+    {high: 77,low: 64,summary: "Sunny"}],
+     "date" => "6-21-18",ref_num: 3456789765456787656}
     # Using the three_day_forecast variable defined above,
     # retrieve the expected piece of information
-
-    actual = 55
+    day_2 = three_day_forecast[:days][1]
+    actual = day_2[:high]
     expected = 55
     expect(actual).to eq(expected)
   end
@@ -185,27 +191,33 @@ RSpec.describe 'Nested Collections' do
     # Using the three_day_forecast variable defined above,
     # retrieve the expected piece of information
 
-    actual = three_day_forecast[:days].keys
+    actual = three_day_forecast[:days][1].keys
     expected = [:high, :low, :summary]
     expect(actual).to eq(expected)
   end
 
-  xit 'test 17' do
-    three_day_forecast = {days: [{high: 70,low: 63,summary: "Mostly Sunny"},{high: 55,low: 47,summary: "Partly Cloudy"},{high: 77,low: 64,summary: "Sunny"}], "date" => "6-21-18",ref_num: 3456789765456787656}
+  it 'test 17' do
+    three_day_forecast = {days: [{high: 70,low: 63,summary: "Mostly Sunny"},
+    {high: 55,low: 47,summary: "Partly Cloudy"},
+    {high: 77,low: 64,summary: "Sunny"}], 
+    "date" => "6-21-18",ref_num: 3456789765456787656}
     # Using the three_day_forecast variable defined above,
     # retrieve the expected piece of information
-
-    actual = ________
+    day_3 = three_day_forecast[:days][2]
+    actual = day_3.values
     expected = [77, 64, "Sunny"]
     expect(actual).to eq(expected)
   end
 
   xit 'test 18' do
-    three_day_forecast = {days: [{high: 70,low: 63,summary: "Mostly Sunny"},{high: 55,low: 47,summary: "Partly Cloudy"},{high: 77,low: 64,summary: "Sunny"}], "date" => "6-21-18",ref_num: 3456789765456787656}
+    three_day_forecast = {days: [{high: 70,low: 63,summary: "Mostly Sunny"},
+    {high: 55,low: 47,summary: "Partly Cloudy"},
+    {high: 77,low: 64,summary: "Sunny"}],
+     "date" => "6-21-18",ref_num: 3456789765456787656}
     # Using the three_day_forecast variable defined above,
     # retrieve the expected piece of information
 
-    actual = _________
+    actual = 
     expected = "date"
     expect(actual).to eq(expected)
   end
