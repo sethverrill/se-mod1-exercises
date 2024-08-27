@@ -1,7 +1,7 @@
 RSpec.describe 'Hashes' do
   it 'test 1' do
     # In the line below, create a new empty hash called empty
-    empty = Hash.new([])
+    empty = {}
     expect(empty).to eq({})
   end
 
