@@ -105,9 +105,13 @@ denver_biscuit_co = {
 
 # Challenge 1:
 # Return the name ("Denver Biscuit")
+puts denver_biscuit_co[:name]
 # Return the rating (4.5)
+puts denver_biscuit_co[:rating]
 # Return a list of accepted transactions (["pickup", "delivery"])
+puts denver_biscuit_co[:transactions]
 # Return the first listed category title ("Sandwiches")
+puts denver_biscuit_co[:categories][0][:title]
 # Return the opening hour on Tuesday (day 1) ("0800")
 # Return the closing hour on Saturday (day 5) ("1500")
 # Return the current open status (is_now_open) (true)
