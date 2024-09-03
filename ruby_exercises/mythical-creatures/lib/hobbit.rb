@@ -12,7 +12,8 @@ class Hobbit
   end
 
   def assign_ring_on_creation
-    
+    return true if self.name.downcase == "frodo"
+    false
   end
 
   def adult?
@@ -25,8 +26,7 @@ class Hobbit
   end
 
   def has_ring?
-    return true if self.name == "Frodo"
-    false
+    has_ring
   end
 
 
