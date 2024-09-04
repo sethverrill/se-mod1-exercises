@@ -21,6 +21,11 @@ class Hobbit
     false
   end
 
+  def old?
+    return true if age > 65
+    false
+  end
+
   def celebrate_birthday
       @age += 1
   end
@@ -29,6 +34,7 @@ class Hobbit
     has_ring
   end
 
-
-  
+  def is_short?
+    true
+  end  
 end
